@@ -32,7 +32,7 @@
       "tag": "experience",
       "patterns": [
         "How many years of experience", "How long have you been Coding?", "How long have you been programming?",
-        "how much programming experience do you have?", "how much coding experience do you have?"
+        "how much programming experience do you have?", "how much coding experience do you have?","Experience?"
       ],
       "responses": [
         "I have been coding since around 2016 but professionally around 5 years of experience",
@@ -54,9 +54,9 @@
     },
 
     {
-      "tag": "hours",
-      "patterns": [],
-      "responses": []
+      "tag": "hire",
+      "patterns": ["Should I hire Ricky?"],
+      "responses": ["Absolutely"]
     },
     {
       "tag": "location",

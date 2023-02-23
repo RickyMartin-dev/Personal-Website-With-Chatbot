@@ -11,11 +11,19 @@ except:
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('train_bot/intents.json', 'r') as json_data:
-    intents = json.load(json_data)
+try:
+    with open('train_bot/intents.json', 'r') as f:
+        intents = json.load(f)
+except:
+    with open('intents.json', 'r') as f:
+        intents = json.load(f)
 
-FILE = "train_bot/data.pth"
-data = torch.load(FILE)
+try:
+    FILE = "train_bot/data.pth"
+    data = torch.load(FILE)
+except:
+    FILE = "data.pth"
+    data = torch.load(FILE)
 
 input_size = data["input_size"]
 hidden_size = data["hidden_size"]
