@@ -1,5 +1,9 @@
 build:
   docker:
+<<<<<<< HEAD
     web: Dockerfile
 run: 
   web: gunicorn app:app
+=======
+    web: gunicorn app:app
+>>>>>>> 05bea8225de86c9c9d52a677250e2d8a98d0637e
