@@ -3,7 +3,7 @@ from llama_index import download_loader, LLMPredictor, GPTSimpleVectorIndex, Pro
 from langchain import OpenAI
 from train_bot.key import secret_key
 
-os.environ['OPENAI_API_KEY'] = secret_key
+os.environ['OPENAI_API_KEY'] = secret_key 
 
 DadJokesReader = download_loader("DadJokesReader")
 
