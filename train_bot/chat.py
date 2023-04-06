@@ -21,6 +21,6 @@ def get_response(msg):
     if msg.lower() in ["quit", "bye", "goodbye", "stop"]:
         resp = "Have a great day!"
     else:
-        resp = dad_index.query(msg)
+        resp = dad_index.query(msg) 
     
     return str(resp) 
