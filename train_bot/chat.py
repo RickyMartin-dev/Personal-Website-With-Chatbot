@@ -1,9 +1,8 @@
 import os
 from llama_index import download_loader, LLMPredictor, GPTSimpleVectorIndex, PromptHelper, ServiceContext
 from langchain import OpenAI
-from train_bot.key import secret_key
 
-os.environ['OPENAI_API_KEY'] = secret_key 
+os.environ['OPENAI_API_KEY'] = os.environ['API_KEY']
 
 DadJokesReader = download_loader("DadJokesReader")
 
