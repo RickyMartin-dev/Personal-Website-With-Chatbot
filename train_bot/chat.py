@@ -4,8 +4,6 @@ from langchain import OpenAI
 
 #print(os.environ.get('WHO_TO_TRUST'), os.environ['WHO_TO_TRUST'])
 temp = str(os.getenv("OPENAI_APIKEY"))
-print(temp)
-print()
 os.environ['OPENAI_API_KEY'] = temp
 
 DadJokesReader = download_loader("DadJokesReader")
@@ -25,4 +23,4 @@ def get_response(msg):
     else:
         resp = dad_index.query(msg)
     
-    return str(resp)
+    return str(resp) 
