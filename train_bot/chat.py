@@ -2,7 +2,11 @@ import os
 from llama_index import download_loader, LLMPredictor, GPTSimpleVectorIndex, PromptHelper, ServiceContext
 from langchain import OpenAI
 
-os.environ['OPENAI_API_KEY'] = os.environ['OPENAI_APIKEY']
+#print(os.environ.get('WHO_TO_TRUST'), os.environ['WHO_TO_TRUST'])
+temp = str(os.getenv("OPENAI_APIKEY"))
+print(temp)
+print()
+os.environ['OPENAI_API_KEY'] = temp
 
 DadJokesReader = download_loader("DadJokesReader")
 
