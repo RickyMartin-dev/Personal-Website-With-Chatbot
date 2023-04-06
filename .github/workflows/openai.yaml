@@ -1,0 +1,12 @@
+name: GitHub Actions Secret Example
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  secrets-in-github-actions:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Test env vars for python
+          run: echo ${{ secrets.OPENAI_APIKEY }} #API_SECRET=${{ secrets.OPENAI_APIKEY }}
