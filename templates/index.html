@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ricky Martin</title>
+		<link rel="stylesheet" href="static/app.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="chatbox">
+				<div class="chatbox__support">
+					<div class="chatbox__header">
+						<div class="chatbox__image--header">
+							<img src="https://img.icons8.com/?size=1x&id=V5KyPdDwWxdx&format=png" alt="image">
+						</div>
+						<div class="chatbox__content--header">
+							<h4 class="chatbox__heading--header">Chat support</h4>
+							<p class="chatbox__description--header">How can I help you?</p>
+						</div>
+					</div>
+					<div class="chatbox__messages">
+						<div></div>
+					</div>
+					<div class="chatbox__footer">
+						<input type="text" placeholder="message...">
+						<button class="chatbox__send--footer send__button">Send</button>
+					</div>
+				</div>
+				<div class="chatbox__button">
+					<button><img src="{{ url_for('static', filename='chat_image/chatbox-icon.svg') }}" class="filter-blue" /></button>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$SCRIPT_ROOT = {{ request.script_root|tojson }};
+		</script>
+		<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+	</body>
+</html>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Extended by Ricky Martin
+-->
+<html>
+	<head>
+		<title>Ricky Martin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="/">Developer Protfolio</a> by Ricky Martin</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="aboutme">About Me</a></li>
+							<li><a href="blog">Blog</a></li>
+							<!-- <li><a href="contact.html">Contact</a></li> -->
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Ricky Martin Portfolio</h2>
+					<p>Data Scientist looking to take on new challenges and inspire a positive impact on society.</p>
+					<ul class="actions special">
+						<li><a href="https://www.linkedin.com/in/rickylm/" class="button primary">LinkedIn</a></li>
+						<li><a href="static/images/Martin_Resume.pdf" class="button">Resume</a></li>
+					</ul>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+
+					<section class="box special">
+						<header class="major">
+							<h2>Introducing a Modern Charasmatic Chatbot</h2>
+							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
+							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+							<span class="image featured"><img src="static/images/pic02.jpg" alt="" /></span>
+							<ul class="actions special">
+								<li><a href="#" class="button alt">Learn More</a></li>
+							</ul>
+						</header>
+					</section>
+
+					<!--
+					<section class="box special features">
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-bolt accent2"></span>
+								<h3>Magna etiam</h3>
+								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-chart-area accent3"></span>
+								<h3>Ipsum dolor</h3>
+								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+							</section>
+						</div>
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-cloud accent4"></span>
+								<h3>Sed feugiat</h3>
+								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-lock accent5"></span>
+								<h3>Enim phasellus</h3>
+								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+							</section>
+						</div>
+					</section>
+					-->
+
+
+					<div class="row">
+						<!-- Project 1 -->
+						<div class="col-6 col-12-narrower">
+							<section class="box special">
+								<span class="image featured"><img src="static/images/pic01.jpg" alt="" /></span>
+								<h3>Project 1</h3>
+								<p>Explination 1.</p>
+								<ul class="actions special">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+						<!-- Project 2 -->
+						<div class="col-6 col-12-narrower">
+							<section class="box special">
+								<span class="image featured"><img src="static/images/pic01.jpg" alt="" /></span>
+								<h3>Project 2</h3>
+								<p>Explination 2.</p>
+								<ul class="actions special">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+						<!-- Project 3 -->
+						<div class="col-6 col-12-narrower">
+							<section class="box special">
+								<span class="image featured"><img src="static/images/pic01.jpg" alt="" /></span>
+								<h3>Project 3</h3>
+								<p>Explination 3.</p>
+								<ul class="actions special">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+						<!-- Project 4 -->
+						<div class="col-6 col-12-narrower">
+							<section class="box special">
+								<span class="image featured"><img src="static/images/pic01.jpg" alt="" /></span>
+								<h3>Project 4</h3>
+								<p>Explination 4.</p>
+								<ul class="actions special">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+						<!-- Project 5 -->
+						<div class="col-6 col-12-narrower">
+							<section class="box special">
+								<span class="image featured"><img src="static/images/pic01.jpg" alt="" /></span>
+								<h3>Project 5</h3>
+								<p>Explination 5.</p>
+								<ul class="actions special">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+						<!-- Project 6 -->
+						<div class="col-6 col-12-narrower">
+							<section class="box special">
+								<span class="image featured"><img src="static/images/pic01.jpg" alt="" /></span>
+								<h3>Project 6</h3>
+								<p>Explination 6.</p>
+								<ul class="actions special">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+
+					</div>
+
+				</section>
+
+			<!-- CTA -->
+				
+				<section id="cta">
+
+					<h2>Stay In Touch</h2>
+					<p>EMAIL: rickylenmartin@gmail.com</p>
+					
+					
+					<form>
+						<div class="row gtr-50 gtr-uniform">
+							<div class="col-8 col-12-mobilep">
+								<input type="email" name="email" id="email" placeholder="Email Address" />
+							</div>
+							<div class="col-4 col-12-mobilep">
+								<input type="submit" value="Reach Out" class="fit" />
+							</div>
+						</div>
+					</form>
+					
+				</section>
+				
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/rickylm/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/RickyMartin-dev" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
+						<li><a href="https://open.spotify.com/artist/7slfeZO9LsJbWgpkIoXBUJ" class="icon brands fa-spotify"><span class="label">Spotify</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Ricky Martin</li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/jquery.dropotron.min.js"></script>
+			<script src="static/js/jquery.scrollex.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>
