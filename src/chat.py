@@ -10,7 +10,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.question_answering import load_qa_chain
 
 # Get API KEYS
-os.environ['OPENAI_API_KEY'] = "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"#str(os.getenv("OPENAI_APIKEY"))
+os.environ['OPENAI_API_KEY'] = str(os.getenv("OPENAI_APIKEY"))
 
 # Load resume text information
 loader = TextLoader("src/Martin_Resume.txt")
