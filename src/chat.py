@@ -1,32 +1,56 @@
 # Get Imports 
 import os
-from pathlib import Path
-from llama_index import download_loader, GPTVectorStoreIndex
-from langchain import OpenAI
+from langchain.llms import OpenAI
+from langchain.vectorstores import FAISS
+from langchain.prompts import PromptTemplate
+from langchain.document_loaders import TextLoader
+from langchain.memory import ConversationBufferMemory
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.text_splitter import CharacterTextSplitter
+from langchain.chains.question_answering import load_qa_chain
 
 # Get API KEYS
-os.environ['OPENAI_API_KEY'] = str(os.getenv("OPENAI_APIKEY"))
+os.environ['OPENAI_API_KEY'] = "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"#str(os.getenv("OPENAI_APIKEY"))
 
-# Define Data For Chat Bot
-pdfreader = download_loader("PDFReader")
+# Load resume text information
+loader = TextLoader("src/Martin_Resume.txt")
 
-# Load Data
-loader = pdfreader()
-documents = loader.load_data(file=Path('src/Martin.pdf'))
+# Load document
+docs = loader.load()
 
-# Vector Indexing 
-pdf_index = GPTVectorStoreIndex.from_documents(documents)
-query_engine = pdf_index.as_query_engine()
+# Text embedder for document
+text_splitter = CharacterTextSplitter(separator = "\n",chunk_size = 300,chunk_overlap  = 200,length_function = len)
 
-bot_name = "Monday"
+# text embedding
+docs = text_splitter.split_documents(docs)
+docsearch = FAISS.from_documents(docs, OpenAIEmbeddings())
 
-# Run Chat
+# Chat Template
+template = """You are a chatbot having a conversation with a human, respond in a comical way and make sure your output is less than 50 words long.
+Given the following extracted context and a question, create a final answer.
+{context}
+{chat_history}
+Human: {human_input}
+Chatbot:"""
+
+# Chat Prompt
+prompt = PromptTemplate(input_variables=["chat_history", "human_input", "context"],template=template)
+
+# Chat Memory
+memory = ConversationBufferMemory(memory_key="chat_history", input_key="human_input")
+
+# Chat QA chain
+chain = load_qa_chain(OpenAI(temperature=0.7), chain_type="stuff", memory=memory, prompt=prompt)
+
+# Run the chat bot
 def get_response(msg):
+
     msg = str(msg)
-    #print("Let's chat! (type 'quit' or 'bye' to exit)")
+
     if msg.lower() in ["quit", "bye", "goodbye", "stop"]:
         resp = "Have a great day!"
     else:
-        resp = query_engine.query(msg) 
-    
+        docs = docsearch.similarity_search(msg)
+        values = chain({"input_documents": docs, "human_input": msg}, return_only_outputs=True)
+        resp = str(values['output_text'])
     return str(resp) 

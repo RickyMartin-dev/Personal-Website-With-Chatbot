@@ -1,0 +1,71 @@
+﻿Ricky Martin
+rickylenmartin@gmail.com | (661) 808-3055 | www.linkedin.com/in/rickylm/ | personalportfolio-rlm.herokuapp.com | New York, NY
+
+
+PROFESSIONAL EXPERIENCE             
+
+
+Ardent         New York, NY (Remote)
+Mid-Level Machine Learning (AI) Engineer        January 2022 - May 2023
+* Devised classification algorithm for heavily skewed data using XGBoost and PySpark, achieving best PRAUC score of .91 after employing SMOTE techniques. Built/Monitored via AWS SageMaker
+* Partnered with security team to build end-to-end time series models (ARIMA, Kalman Filter, Prophet) to monitor login attempts in Splunk in real time predicting anomalies and reducing threat targeting time by 90%   
+* Built, maintained, and automated ML pipeline using technologies like GraphQL, SQL, Python, and AWS to serve API endpoints used for time based predictions on internal performance metrics and root cause analysis 
+* Directed team of 2 in using Tensorflow to build POC Object Detection Algorithms through use of custom Drone Camera Data
+
+
+Redica Systems        Los Angeles, CA (Remote)
+Data Scientist        October 2020 - October 2021
+* Implemented production-level semi-supervised DBSCAN algorithm in Python, utilizing NLP techniques like TF-IDF through NLTK to segment documents, streamlining the manual labeling process and saving 40+ man hours
+* Improved precision and recall of supervised deep learning model by 10% using feature engineering, enhancing model effectiveness
+* Collaborated with cross-functional partners to define client KPIs and presented customizable data analytics dashboards in Tableau showcasing impact of data-driven solutions based on specified client data
+
+
+UCSD Bio Inspired Robotics and Design Lab        San Diego, CA
+Data Science (ML) Researcher        May 2018 - June 2021
+* Spearheaded the construction of 5 distinct ML on edge iterations gathering/building large datasets from live sensor data and using Python/C++ to extract, clean, transform, interpret, and train Sequence-to-Vector Deep Learning LSTM/GRU Models 
+* Devised a Random Forest parameter tuning pipeline that utilized impactful features for 50% faster classification
+* Built GAN model using Keras and Tensorflow to extend custom dataset increasing training dataset 
+
+
+GoSite        San Diego, CA
+Data Science Intern        October 2019 - October 2020
+* Developed recommendation system using SVM and KNN models to rank new leads based on predicted call length and probability of purchasing website development services, resulting in a 20% increased conversion rate
+* Wrote cost optimization script that calculated efficiency of project scope to that of GPU instance for 70% cost reduction 
+
+
+PROJECTS
+
+
+Fine Tuned ChatGPT Chatbot for Personal Website Website
+* Built, Dockerized, and Deployed user-friendly ChatGPT chatbot using OPENAI API, LangChain, and Flask to engage visitors and showcase applied NLP communication skills. Fine tuned bot on extended resume to answer questions about my skill set
+
+
+End-To-End Machine Learning Titanic EDA + ML Optimization Kaggle
+* Kickstart series of tutorials I am making to introduce what real world ML looks like for the influx of new Data Scientists
+
+
+Robot Arm Optimal Path Finder Github
+* Instructed a team in applying Q-Learning Reinforcement Learning to find optimal path through 3d printed maze using robotic arm
+
+
+TECHNICAL SKILLS
+
+
+Languages: Python, R, SQL, C++, Bash
+Frameworks: NumPy, Pandas, Scikit-Learn, Matplotlib, Seaborn, OpenCV, TensorFlow, Keras, Pytorch, Flask
+Domain Knowledge: A/B testing, statistical modeling, ETL, time-series, CNN, RNN, Transformer, BERT, GPT
+Technologies: AWS, CICD, Docker, Databricks, Excel, Git, HuggingFace, Jupyter, JSON, Linux, SageMaker, Spark, Tableau
+
+
+EDUCATION
+
+
+UC San Diego        Graduated June 2021
+B.S. in Cognitive Science (Machine Learning Specialization) 
+
+
+PUBLICATIONS
+
+
+Classification of components of affective touch using rapidly manufacturable, soft, sensor skins - IEEE-RAS 2020
+Towards classification of components of affective touch using rapidly manufacturable, soft, sensor skins - RoboTac 2019
